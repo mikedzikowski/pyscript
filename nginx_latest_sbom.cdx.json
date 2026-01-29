@@ -1,0 +1,5062 @@
+{
+	"$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+	"bomFormat": "CycloneDX",
+	"specVersion": "1.6",
+	"version": 1,
+	"metadata": {
+		"timestamp": "2026-01-28T20:04:39Z",
+		"tools": {
+			"services": [
+				{
+					"provider": {
+						"name": "Falcon Cloud Security CLI"
+					},
+					"name": "CrowdStrike Falcon Image Scanning Tool",
+					"version": "1.0.0",
+					"description": "CrowdStrike, Inc"
+				}
+			]
+		},
+		"component": {
+			"type": "data",
+			"name": "index.docker.io/library/nginx",
+			"version": "latest",
+			"purl": "pkg:oci/:library/nginx@87f9e7e471ec2dda8b68f40d5259e6e723baf8a0401f6f2a30a47ff00c087062",
+			"properties": [
+				{
+					"name": "image:id",
+					"value": "9d0e6f6199dcb6e045dad103064601d730fcfaf8d1bd357d969fb70bd5b90dec"
+				},
+				{
+					"name": "image:digest",
+					"value": "87f9e7e471ec2dda8b68f40d5259e6e723baf8a0401f6f2a30a47ff00c087062"
+				},
+				{
+					"name": "image:registry",
+					"value": "index.docker.io"
+				},
+				{
+					"name": "image:repository",
+					"value": "library/nginx"
+				},
+				{
+					"name": "image:tag",
+					"value": "latest"
+				},
+				{
+					"name": "image:architecture",
+					"value": "amd64"
+				},
+				{
+					"name": "image:size",
+					"value": "155466240"
+				},
+				{
+					"name": "image:created_at",
+					"value": "2025-10-28T21:50:05Z"
+				}
+			],
+			"components": [
+				{
+					"type": "data",
+					"name": "Image Configuration Info",
+					"properties": [
+						{
+							"name": "config:user",
+							"value": ""
+						},
+						{
+							"name": "config:workingDir",
+							"value": ""
+						},
+						{
+							"name": "config:stopSignal",
+							"value": "SIGQUIT"
+						},
+						{
+							"name": "config:exposedPorts",
+							"value": "80/tcp"
+						},
+						{
+							"name": "config:env",
+							"value": "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin,NGINX_VERSION=1.29.3,NJS_VERSION=0.9.4,NJS_RELEASE=1~trixie,PKG_RELEASE=1~trixie,DYNPKG_RELEASE=1~trixie"
+						},
+						{
+							"name": "config:cmd",
+							"value": "nginx,-g,daemon off;"
+						},
+						{
+							"name": "config:entrypoint",
+							"value": "/docker-entrypoint.sh"
+						},
+						{
+							"name": "config:label:maintainer",
+							"value": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+						}
+					]
+				},
+				{
+					"type": "operating-system",
+					"name": "Debian GNU",
+					"version": "13"
+				},
+				{
+					"type": "data",
+					"name": "Image Manifest Info",
+					"properties": [
+						{
+							"name": "manifest:schemaVersion",
+							"value": "2"
+						},
+						{
+							"name": "manifest:mediaType",
+							"value": "application/vnd.docker.distribution.manifest.v2+json"
+						},
+						{
+							"name": "manifest:config:mediaType",
+							"value": "application/vnd.docker.container.image.v1+json"
+						},
+						{
+							"name": "manifest:config:digest",
+							"value": "sha256:9d0e6f6199dcb6e045dad103064601d730fcfaf8d1bd357d969fb70bd5b90dec"
+						},
+						{
+							"name": "manifest:config:size",
+							"value": "8748"
+						}
+					],
+					"components": [
+						{
+							"type": "file",
+							"name": "Layer 1",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:112f0cce877178faa33e1b2cfeef7fda4b198ad5ff44f02573a61ae1e84c6078"
+								},
+								{
+									"name": "layer:size",
+									"value": "34391315"
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "Layer 2",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+								},
+								{
+									"name": "layer:size",
+									"value": "33394469"
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "Layer 3",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:3434598ec95827bf46eb9222fb04fabfaa6f7ae59eff1d7e0ff0cad0db65af51"
+								},
+								{
+									"name": "layer:size",
+									"value": "662"
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "Layer 4",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:f198c316473e98d1a7182b9f2180d2b7f327ba46567c7eefe1c631e0cc413524"
+								},
+								{
+									"name": "layer:size",
+									"value": "990"
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "Layer 5",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:2ba7754b035eaa5de039b3c3526dbaa527c70a5fd3b416232e6a366097cbf00a"
+								},
+								{
+									"name": "layer:size",
+									"value": "415"
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "Layer 6",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:b9af3ce6ed9e7148074d67fef72fdc243218a79edf20fd1ef9f255a40f882274"
+								},
+								{
+									"name": "layer:size",
+									"value": "1296"
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "Layer 7",
+							"properties": [
+								{
+									"name": "layer:mediaType",
+									"value": "application/vnd.docker.image.rootfs.diff.tar.gzip"
+								},
+								{
+									"name": "layer:digest",
+									"value": "sha256:5626337fcc37ba08faf2e16b42ac9012c5e10697d25ef30a326a1d8a5b61b417"
+								},
+								{
+									"name": "layer:size",
+									"value": "1583"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+	"components": [
+		{
+			"type": "library",
+			"name": "mount",
+			"version": "2.41-5",
+			"purl": "pkg:deb/mount@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "nginx",
+			"version": "1.29.3-1~trixie",
+			"purl": "pkg:deb/nginx@1.29.3-1~trixie?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "NGINX Packaging \u003cnginx-packaging@f5.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nginx 1.29.3-1~trixie"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libc-bin",
+			"version": "2.41-12",
+			"purl": "pkg:deb/libc-bin@2.41-12?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "GNU Libc Maintainers \u003cdebian-glibc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "glibc 2.41-12"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libexpat1",
+			"version": "2.7.1-2",
+			"purl": "pkg:deb/libexpat1@2.7.1-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Laszlo Boszormenyi (GCS) \u003cgcs@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "expat 2.7.1-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpam-modules",
+			"version": "1.7.0-5",
+			"purl": "pkg:deb/libpam-modules@1.7.0-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "pam 1.7.0-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpcre2-8-0",
+			"version": "10.46-1~deb13u1",
+			"purl": "pkg:deb/libpcre2-8-0@10.46-1~deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Matthew Vernon \u003cmatthew@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "pcre2 10.46-1~deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsharpyuv0",
+			"version": "1.5.0-0.1",
+			"purl": "pkg:deb/libsharpyuv0@1.5.0-0.1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Jeff Breidenbach \u003cjab@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libwebp 1.5.0-0.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libzstd1",
+			"version": "1.5.7+dfsg-1",
+			"purl": "pkg:deb/libzstd1@1.5.7+dfsg-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "RPM packaging team \u003cteam+pkg-rpm@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libzstd 1.5.7+dfsg-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "ncurses-bin",
+			"version": "6.5+20250216-2",
+			"purl": "pkg:deb/ncurses-bin@6.5+20250216-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Ncurses Maintainers \u003cncurses@packages.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "ncurses 6.5+20250216-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "passwd",
+			"version": "1:4.17.4-2",
+			"purl": "pkg:deb/passwd@1:4.17.4-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Shadow package maintainers \u003cpkg-shadow-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "shadow 1:4.17.4-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "diffutils",
+			"version": "1:3.10-4",
+			"purl": "pkg:deb/diffutils@1:3.10-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Santiago Vila \u003csanvila@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "diffutils 1:3.10-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libedit2",
+			"version": "3.1-20250104-1",
+			"purl": "pkg:deb/libedit2@3.1-20250104-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "LLVM Packaging Team \u003cpkg-llvm-team@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libedit 3.1-20250104-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "ncurses-base",
+			"version": "6.5+20250216-2",
+			"purl": "pkg:deb/ncurses-base@6.5+20250216-2?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Ncurses Maintainers \u003cncurses@packages.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "ncurses 6.5+20250216-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "util-linux",
+			"version": "2.41-5",
+			"purl": "pkg:deb/util-linux@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libattr1",
+			"version": "1:2.5.2-3",
+			"purl": "pkg:deb/libattr1@1:2.5.2-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Guillem Jover \u003cguillem@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "attr 1:2.5.2-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libcrypt1",
+			"version": "1:4.4.38-1",
+			"purl": "pkg:deb/libcrypt1@1:4.4.38-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Marco d'Itri \u003cmd@linux.it\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxcrypt 1:4.4.38-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libde265-0",
+			"version": "1.0.15-1+b3",
+			"purl": "pkg:deb/libde265-0@1.0.15-1+b3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libde265 1.0.15-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libimagequant0",
+			"version": "2.18.0-1+b2",
+			"purl": "pkg:deb/libimagequant0@2.18.0-1+b2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian PhotoTools Maintainers \u003cpkg-phototools-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libimagequant 2.18.0-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libwebp7",
+			"version": "1.5.0-0.1",
+			"purl": "pkg:deb/libwebp7@1.5.0-0.1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Jeff Breidenbach \u003cjab@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libwebp 1.5.0-0.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "sqv",
+			"version": "1.3.0-3",
+			"purl": "pkg:deb/sqv@1.3.0-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Rust Maintainers \u003cpkg-rust-maintainers@alioth-lists.debian.net\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "rust-sequoia-sqv 1.3.0-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "fonts-dejavu-core",
+			"version": "2.37-8",
+			"purl": "pkg:deb/fonts-dejavu-core@2.37-8?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Fonts Task Force \u003cdebian-fonts@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "fonts-dejavu 2.37-8"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libbrotli1",
+			"version": "1.1.0-2+b7",
+			"purl": "pkg:deb/libbrotli1@1.1.0-2+b7?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Tomasz Buchert \u003ctomasz@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "brotli 1.1.0-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libc6",
+			"version": "2.41-12",
+			"purl": "pkg:deb/libc6@2.41-12?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "GNU Libc Maintainers \u003cdebian-glibc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "glibc 2.41-12"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libkrb5support0",
+			"version": "1.21.3-5",
+			"purl": "pkg:deb/libkrb5support0@1.21.3-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "krb5 1.21.3-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "login",
+			"version": "1:4.16.0-2+really2.41-5",
+			"purl": "pkg:deb/login@1:4.16.0-2+really2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libacl1",
+			"version": "2.3.2-2+b1",
+			"purl": "pkg:deb/libacl1@2.3.2-2+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Guillem Jover \u003cguillem@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "acl 2.3.2-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libcap2",
+			"version": "1:2.75-10+b1",
+			"purl": "pkg:deb/libcap2@1:2.75-10+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Christian Kastner \u003cckk@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libcap2 1:2.75-10"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgnutls30t64",
+			"version": "3.8.9-3",
+			"purl": "pkg:deb/libgnutls30t64@3.8.9-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GnuTLS Maintainers \u003cpkg-gnutls-maint@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gnutls28 3.8.9-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libtasn1-6",
+			"version": "4.20.0-2",
+			"purl": "pkg:deb/libtasn1-6@4.20.0-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GnuTLS Maintainers \u003cpkg-gnutls-maint@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libtasn1-6 4.20.0-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libyuv0",
+			"version": "0.0.1904.20250204-1",
+			"purl": "pkg:deb/libyuv0@0.0.1904.20250204-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libyuv 0.0.1904.20250204-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "login.defs",
+			"version": "1:4.17.4-2",
+			"purl": "pkg:deb/login.defs@1:4.17.4-2?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Shadow package maintainers \u003cpkg-shadow-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "shadow 1:4.17.4-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libcap-ng0",
+			"version": "0.8.5-4+b1",
+			"purl": "pkg:deb/libcap-ng0@0.8.5-4+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Håvard F. Aasen \u003chavard.f.aasen@pfft.no\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libcap-ng 0.8.5-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgssapi-krb5-2",
+			"version": "1.21.3-5",
+			"purl": "pkg:deb/libgssapi-krb5-2@1.21.3-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "krb5 1.21.3-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libheif1",
+			"version": "1.19.8-1",
+			"purl": "pkg:deb/libheif1@1.19.8-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libheif 1.19.8-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "liblastlog2-2",
+			"version": "2.41-5",
+			"purl": "pkg:deb/liblastlog2-2@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libseccomp2",
+			"version": "2.6.0-2",
+			"purl": "pkg:deb/libseccomp2@2.6.0-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Kees Cook \u003ckees@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libseccomp 2.6.0-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsystemd0",
+			"version": "257.8-1~deb13u2",
+			"purl": "pkg:deb/libsystemd0@257.8-1~deb13u2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian systemd Maintainers \u003cpkg-systemd-maintainers@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "systemd 257.8-1~deb13u2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "debian-archive-keyring",
+			"version": "2025.1",
+			"purl": "pkg:deb/debian-archive-keyring@2025.1?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Release Team \u003cpackages@release.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "debian-archive-keyring 2025.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "debconf",
+			"version": "1.5.91",
+			"purl": "pkg:deb/debconf@1.5.91?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debconf Developers \u003cdebconf-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "debconf 1.5.91"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libcom-err2",
+			"version": "1.47.2-3+b3",
+			"purl": "pkg:deb/libcom-err2@1.47.2-3+b3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Theodore Y. Ts'o \u003ctytso@mit.edu\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "e2fsprogs 1.47.2-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgcrypt20",
+			"version": "1.11.0-7",
+			"purl": "pkg:deb/libgcrypt20@1.11.0-7?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GnuTLS Maintainers \u003cpkg-gnutls-maint@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libgcrypt20 1.11.0-7"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libp11-kit0",
+			"version": "0.25.5-3",
+			"purl": "pkg:deb/libp11-kit0@0.25.5-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GnuTLS Maintainers \u003cpkg-gnutls-maint@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "p11-kit 0.25.5-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsemanage2",
+			"version": "3.8.1-1",
+			"purl": "pkg:deb/libsemanage2@3.8.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian SELinux maintainers \u003cselinux-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libsemanage 3.8.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libssh2-1t64",
+			"version": "1.11.1-1",
+			"purl": "pkg:deb/libssh2-1t64@1.11.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Nicolas Mora \u003cbabelouest@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libssh2 1.11.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "dash",
+			"version": "0.5.12-12",
+			"purl": "pkg:deb/dash@0.5.12-12?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Andrej Shadura \u003candrewsh@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "dash 0.5.12-12"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgmp10",
+			"version": "2:6.3.0+dfsg-3",
+			"purl": "pkg:deb/libgmp10@2:6.3.0+dfsg-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Science Maintainers \u003cdebian-science-maintainers@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gmp 2:6.3.0+dfsg-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libx11-data",
+			"version": "2:1.8.12-1",
+			"purl": "pkg:deb/libx11-data@2:1.8.12-1?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian X Strike Force \u003cdebian-x@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libx11 2:1.8.12-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "nginx-module-geoip",
+			"version": "1.29.3-1~trixie",
+			"purl": "pkg:deb/nginx-module-geoip@1.29.3-1~trixie?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "NGINX Packaging \u003cnginx-packaging@f5.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nginx-module-geoip 1.29.3-1~trixie"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libcurl4t64",
+			"version": "8.14.1-2",
+			"purl": "pkg:deb/libcurl4t64@8.14.1-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Curl Maintainers \u003cteam+curl@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "curl 8.14.1-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgeoip1t64",
+			"version": "1.6.12-11.1+b1",
+			"purl": "pkg:deb/libgeoip1t64@1.6.12-11.1+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Patrick Matthäi \u003cpmatthaei@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "geoip 1.6.12-11.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libavif16",
+			"version": "1.2.1-1.2",
+			"purl": "pkg:deb/libavif16@1.2.1-1.2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libavif 1.2.1-1.2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libdebconfclient0",
+			"version": "0.280",
+			"purl": "pkg:deb/libdebconfclient0@0.280?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Install System Team \u003cdebian-boot@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "cdebconf 0.280"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libidn2-0",
+			"version": "2.3.8-2",
+			"purl": "pkg:deb/libidn2-0@2.3.8-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Libidn team \u003chelp-libidn@gnu.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libidn2 2.3.8-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "liblerc4",
+			"version": "4.0.0+ds-5",
+			"purl": "pkg:deb/liblerc4@4.0.0+ds-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GIS Project \u003cpkg-grass-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "lerc 4.0.0+ds-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsasl2-2",
+			"version": "2.1.28+dfsg1-9",
+			"purl": "pkg:deb/libsasl2-2@2.1.28+dfsg1-9?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Cyrus Team \u003cteam+cyrus@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "cyrus-sasl2 2.1.28+dfsg1-9"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libblkid1",
+			"version": "2.41-5",
+			"purl": "pkg:deb/libblkid1@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "grep",
+			"version": "3.11-4",
+			"purl": "pkg:deb/grep@3.11-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Anibal Monsalve Salazar \u003canibal@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "grep 3.11-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libkeyutils1",
+			"version": "1.6.3-6",
+			"purl": "pkg:deb/libkeyutils1@1.6.3-6?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Christian Kastner \u003cckk@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "keyutils 1.6.3-6"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libmd0",
+			"version": "1.1.0-2+b1",
+			"purl": "pkg:deb/libmd0@1.1.0-2+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Guillem Jover \u003cguillem@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libmd 1.1.0-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libnettle8t64",
+			"version": "3.10.1-1",
+			"purl": "pkg:deb/libnettle8t64@3.10.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Magnus Holmgren \u003cholmgren@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nettle 3.10.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libssl3t64",
+			"version": "3.5.1-1+deb13u1",
+			"purl": "pkg:deb/libssl3t64@3.5.1-1+deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian OpenSSL Team \u003cpkg-openssl-devel@alioth-lists.debian.net\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "openssl 3.5.1-1+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "nginx-module-xslt",
+			"version": "1.29.3-1~trixie",
+			"purl": "pkg:deb/nginx-module-xslt@1.29.3-1~trixie?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "NGINX Packaging \u003cnginx-packaging@f5.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nginx-module-xslt 1.29.3-1~trixie"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "fontconfig-config",
+			"version": "2.15.0-2.3",
+			"purl": "pkg:deb/fontconfig-config@2.15.0-2.3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian freedesktop.org maintainers \u003cpkg-freedesktop-maintainers@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "fontconfig 2.15.0-2.3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgomp1",
+			"version": "14.2.0-19",
+			"purl": "pkg:deb/libgomp1@14.2.0-19?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GCC Maintainers \u003cdebian-gcc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gcc-14 14.2.0-19"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libkrb5-3",
+			"version": "1.21.3-5",
+			"purl": "pkg:deb/libkrb5-3@1.21.3-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "krb5 1.21.3-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libmount1",
+			"version": "2.41-5",
+			"purl": "pkg:deb/libmount1@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libnghttp2-14",
+			"version": "1.64.0-1.1",
+			"purl": "pkg:deb/libnghttp2-14@1.64.0-1.1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Tomasz Buchert \u003ctomasz@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nghttp2 1.64.0-1.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxpm4",
+			"version": "1:3.5.17-1+b3",
+			"purl": "pkg:deb/libxpm4@1:3.5.17-1+b3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian X Strike Force \u003cdebian-x@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxpm 1:3.5.17-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "hostname",
+			"version": "3.25",
+			"purl": "pkg:deb/hostname@3.25?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Michael Meskes \u003cmeskes@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "hostname 3.25"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgav1-1",
+			"version": "0.19.0-3+b1",
+			"purl": "pkg:deb/libgav1-1@0.19.0-3+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libgav1 0.19.0-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpam-runtime",
+			"version": "1.7.0-5",
+			"purl": "pkg:deb/libpam-runtime@1.7.0-5?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "pam 1.7.0-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libunistring5",
+			"version": "1.3-2",
+			"purl": "pkg:deb/libunistring5@1.3-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Jörg Frings-Fürst \u003cdebian@jff.email\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libunistring 1.3-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "gcc-14-base",
+			"version": "14.2.0-19",
+			"purl": "pkg:deb/gcc-14-base@14.2.0-19?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GCC Maintainers \u003cdebian-gcc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gcc-14 14.2.0-19"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpng16-16t64",
+			"version": "1.6.48-1",
+			"purl": "pkg:deb/libpng16-16t64@1.6.48-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Maintainers of libpng1.6 packages \u003clibpng1.6@packages.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libpng1.6 1.6.48-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "nginx-module-njs",
+			"version": "1.29.3+0.9.4-1~trixie",
+			"purl": "pkg:deb/nginx-module-njs@1.29.3+0.9.4-1~trixie?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "NGINX Packaging \u003cnginx-packaging@f5.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nginx-module-njs 1.29.3+0.9.4-1~trixie"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "tzdata",
+			"version": "2025b-4+deb13u1",
+			"purl": "pkg:deb/tzdata@2025b-4+deb13u1?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "GNU Libc Maintainers \u003cdebian-glibc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "tzdata 2025b-4+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "dpkg",
+			"version": "1.22.21",
+			"purl": "pkg:deb/dpkg@1.22.21?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Dpkg Developers \u003cdebian-dpkg@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "dpkg 1.22.21"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libaudit-common",
+			"version": "1:4.0.2-2",
+			"purl": "pkg:deb/libaudit-common@1:4.0.2-2?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Laurent Bigonville \u003cbigon@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "audit 1:4.0.2-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libfontconfig1",
+			"version": "2.15.0-2.3",
+			"purl": "pkg:deb/libfontconfig1@2.15.0-2.3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian freedesktop.org maintainers \u003cpkg-freedesktop-maintainers@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "fontconfig 2.15.0-2.3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsmartcols1",
+			"version": "2.41-5",
+			"purl": "pkg:deb/libsmartcols1@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsqlite3-0",
+			"version": "3.46.1-7",
+			"purl": "pkg:deb/libsqlite3-0@3.46.1-7?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Laszlo Boszormenyi (GCS) \u003cgcs@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "sqlite3 3.46.1-7"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libtiff6",
+			"version": "4.7.0-3+deb13u1",
+			"purl": "pkg:deb/libtiff6@4.7.0-3+deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Laszlo Boszormenyi (GCS) \u003cgcs@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "tiff 4.7.0-3+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "sysvinit-utils",
+			"version": "3.14-4",
+			"purl": "pkg:deb/sysvinit-utils@3.14-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian sysvinit maintainers \u003cdebian-init-diversity@chiark.greenend.org.uk\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "sysvinit 3.14-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libabsl20240722",
+			"version": "20240722.0-4",
+			"purl": "pkg:deb/libabsl20240722@20240722.0-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Benjamin Barenblat \u003cbbaren@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "abseil 20240722.0-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libk5crypto3",
+			"version": "1.21.3-5",
+			"purl": "pkg:deb/libk5crypto3@1.21.3-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "krb5 1.21.3-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libudev1",
+			"version": "257.8-1~deb13u2",
+			"purl": "pkg:deb/libudev1@257.8-1~deb13u2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian systemd Maintainers \u003cpkg-systemd-maintainers@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "systemd 257.8-1~deb13u2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libjpeg62-turbo",
+			"version": "1:2.1.5-4",
+			"purl": "pkg:deb/libjpeg62-turbo@1:2.1.5-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Ondřej Surý \u003condrej@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libjpeg-turbo 1:2.1.5-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "findutils",
+			"version": "4.10.0-3",
+			"purl": "pkg:deb/findutils@4.10.0-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Andreas Metzler \u003cametzler@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "findutils 4.10.0-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxml2",
+			"version": "2.12.7+dfsg+really2.9.14-2.1+deb13u1",
+			"purl": "pkg:deb/libxml2@2.12.7+dfsg+really2.9.14-2.1+deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian XML/SGML Group \u003cdebian-xml-sgml-pkgs@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxml2 2.12.7+dfsg+really2.9.14-2.1+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "coreutils",
+			"version": "9.7-3",
+			"purl": "pkg:deb/coreutils@9.7-3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Michael Stone \u003cmstone@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "coreutils 9.7-3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libapt-pkg7.0",
+			"version": "3.0.3",
+			"purl": "pkg:deb/libapt-pkg7.0@3.0.3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "APT Development Team \u003cdeity@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "apt 3.0.3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxcb1",
+			"version": "1.17.0-2+b1",
+			"purl": "pkg:deb/libxcb1@1.17.0-2+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian X Strike Force \u003cdebian-x@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxcb 1.17.0-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "nginx-module-image-filter",
+			"version": "1.29.3-1~trixie",
+			"purl": "pkg:deb/nginx-module-image-filter@1.29.3-1~trixie?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "NGINX Packaging \u003cnginx-packaging@f5.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nginx-module-image-filter 1.29.3-1~trixie"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "perl-base",
+			"version": "5.40.1-6",
+			"purl": "pkg:deb/perl-base@5.40.1-6?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Niko Tyni \u003cntyni@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "perl 5.40.1-6"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "gettext-base",
+			"version": "0.23.1-2",
+			"purl": "pkg:deb/gettext-base@0.23.1-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Santiago Vila \u003csanvila@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gettext 0.23.1-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "base-passwd",
+			"version": "3.6.7",
+			"purl": "pkg:deb/base-passwd@3.6.7?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Shadow package maintainers \u003cpkg-shadow-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "base-passwd 3.6.7"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libbz2-1.0",
+			"version": "1.0.8-6",
+			"purl": "pkg:deb/libbz2-1.0@1.0.8-6?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Anibal Monsalve Salazar \u003canibal@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "bzip2 1.0.8-6"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libffi8",
+			"version": "3.4.8-2",
+			"purl": "pkg:deb/libffi8@3.4.8-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GCC Maintainers \u003cdebian-gcc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libffi 3.4.8-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libheif-plugin-libde265",
+			"version": "1.19.8-1",
+			"purl": "pkg:deb/libheif-plugin-libde265@1.19.8-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libheif 1.19.8-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libnghttp3-9",
+			"version": "1.8.0-1",
+			"purl": "pkg:deb/libnghttp3-9@1.8.0-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Curl Maintainers \u003cteam+curl@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nghttp3 1.8.0-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsvtav1enc2",
+			"version": "2.3.0+dfsg-1",
+			"purl": "pkg:deb/libsvtav1enc2@2.3.0+dfsg-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "svt-av1 2.3.0+dfsg-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libuuid1",
+			"version": "2.41-5",
+			"purl": "pkg:deb/libuuid1@2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "base-files",
+			"version": "13.8+deb13u1",
+			"purl": "pkg:deb/base-files@13.8+deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Santiago Vila \u003csanvila@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "base-files 13.8+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxdmcp6",
+			"version": "1:1.1.5-1",
+			"purl": "pkg:deb/libxdmcp6@1:1.1.5-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian X Strike Force \u003cdebian-x@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxdmcp 1:1.1.5-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "librtmp1",
+			"version": "2.4+20151223.gitfa8646d.1-2+b5",
+			"purl": "pkg:deb/librtmp1@2.4+20151223.gitfa8646d.1-2+b5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "rtmpdump 2.4+20151223.gitfa8646d.1-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "openssl",
+			"version": "3.5.1-1+deb13u1",
+			"purl": "pkg:deb/openssl@3.5.1-1+deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian OpenSSL Team \u003cpkg-openssl-devel@alioth-lists.debian.net\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "openssl 3.5.1-1+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "apt",
+			"version": "3.0.3",
+			"purl": "pkg:deb/apt@3.0.3?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "APT Development Team \u003cdeity@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "apt 3.0.3"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "liblzma5",
+			"version": "5.8.1-1",
+			"purl": "pkg:deb/liblzma5@5.8.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sebastian Andrzej Siewior \u003csebastian@breakpoint.cc\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "xz-utils 5.8.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libaom3",
+			"version": "3.12.1-1",
+			"purl": "pkg:deb/libaom3@3.12.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "aom 3.12.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgcc-s1",
+			"version": "14.2.0-19",
+			"purl": "pkg:deb/libgcc-s1@14.2.0-19?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GCC Maintainers \u003cdebian-gcc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gcc-14 14.2.0-19"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgd3",
+			"version": "2.3.3-13",
+			"purl": "pkg:deb/libgd3@2.3.3-13?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "GD Team \u003cteam+gd@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libgd2 2.3.3-13"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libldap2",
+			"version": "2.6.10+dfsg-1",
+			"purl": "pkg:deb/libldap2@2.6.10+dfsg-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian OpenLDAP Maintainers \u003cpkg-openldap-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "openldap 2.6.10+dfsg-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libselinux1",
+			"version": "3.8.1-1",
+			"purl": "pkg:deb/libselinux1@3.8.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian SELinux maintainers \u003cselinux-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libselinux 3.8.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxau6",
+			"version": "1:1.0.11-1",
+			"purl": "pkg:deb/libxau6@1:1.0.11-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian X Strike Force \u003cdebian-x@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxau 1:1.0.11-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "ca-certificates",
+			"version": "20250419",
+			"purl": "pkg:deb/ca-certificates@20250419?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Julien Cristau \u003cjcristau@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "ca-certificates 20250419"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libdb5.3t64",
+			"version": "5.3.28+dfsg2-9",
+			"purl": "pkg:deb/libdb5.3t64@5.3.28+dfsg2-9?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian QA Group \u003cpackages@qa.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "db5.3 5.3.28+dfsg2-9"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libfreetype6",
+			"version": "2.13.3+dfsg-1",
+			"purl": "pkg:deb/libfreetype6@2.13.3+dfsg-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Hugh McMaster \u003chmc@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "freetype 2.13.3+dfsg-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsasl2-modules-db",
+			"version": "2.1.28+dfsg1-9",
+			"purl": "pkg:deb/libsasl2-modules-db@2.1.28+dfsg1-9?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Cyrus Team \u003cteam+cyrus@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "cyrus-sasl2 2.1.28+dfsg1-9"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsepol2",
+			"version": "3.8.1-1",
+			"purl": "pkg:deb/libsepol2@3.8.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian SELinux maintainers \u003cselinux-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libsepol 3.8.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libstdc++6",
+			"version": "14.2.0-19",
+			"purl": "pkg:deb/libstdc++6@14.2.0-19?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GCC Maintainers \u003cdebian-gcc@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gcc-14 14.2.0-19"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "fonts-dejavu-mono",
+			"version": "2.37-8",
+			"purl": "pkg:deb/fonts-dejavu-mono@2.37-8?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Fonts Task Force \u003cdebian-fonts@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "fonts-dejavu 2.37-8"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libhogweed6t64",
+			"version": "3.10.1-1",
+			"purl": "pkg:deb/libhogweed6t64@3.10.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Magnus Holmgren \u003cholmgren@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "nettle 3.10.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "sed",
+			"version": "4.9-2",
+			"purl": "pkg:deb/sed@4.9-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Clint Adams \u003cclint@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "sed 4.9-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libgpg-error0",
+			"version": "1.51-4",
+			"purl": "pkg:deb/libgpg-error0@1.51-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian GnuPG Maintainers \u003cpkg-gnupg-maint@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libgpg-error 1.51-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libsemanage-common",
+			"version": "3.8.1-1",
+			"purl": "pkg:deb/libsemanage-common@3.8.1-1?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian SELinux maintainers \u003cselinux-devel@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libsemanage 3.8.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpam0g",
+			"version": "1.7.0-5",
+			"purl": "pkg:deb/libpam0g@1.7.0-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "pam 1.7.0-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "zlib1g",
+			"version": "1:1.3.dfsg+really1.3.1-1+b1",
+			"purl": "pkg:deb/zlib1g@1:1.3.dfsg+really1.3.1-1+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Mark Brown \u003cbroonie@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "zlib 1:1.3.dfsg+really1.3.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "bash",
+			"version": "5.2.37-2+b5",
+			"purl": "pkg:deb/bash@5.2.37-2+b5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Matthias Klose \u003cdoko@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "bash 5.2.37-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "debianutils",
+			"version": "5.23.2",
+			"purl": "pkg:deb/debianutils@5.23.2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Ileana Dumitrescu \u003cileanadumitrescu95@gmail.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "debianutils 5.23.2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libbsd0",
+			"version": "0.12.2-2",
+			"purl": "pkg:deb/libbsd0@0.12.2-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Guillem Jover \u003cguillem@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libbsd 0.12.2-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "liblz4-1",
+			"version": "1.10.0-4",
+			"purl": "pkg:deb/liblz4-1@1.10.0-4?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Nobuhiro Iwamatsu \u003ciwamatsu@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "lz4 1.10.0-4"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libx11-6",
+			"version": "2:1.8.12-1",
+			"purl": "pkg:deb/libx11-6@2:1.8.12-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian X Strike Force \u003cdebian-x@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libx11 2:1.8.12-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxxhash0",
+			"version": "0.8.3-2",
+			"purl": "pkg:deb/libxxhash0@0.8.3-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Josue Ortega \u003cjosue@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "xxhash 0.8.3-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "bsdutils",
+			"version": "1:2.41-5",
+			"purl": "pkg:deb/bsdutils@1:2.41-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Chris Hofstaedtler \u003czeha@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "util-linux 2.41-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libheif-plugin-dav1d",
+			"version": "1.19.8-1",
+			"purl": "pkg:deb/libheif-plugin-dav1d@1.19.8-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libheif 1.19.8-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libtinfo6",
+			"version": "6.5+20250216-2",
+			"purl": "pkg:deb/libtinfo6@6.5+20250216-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Ncurses Maintainers \u003cncurses@packages.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "ncurses 6.5+20250216-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libdeflate0",
+			"version": "1.23-2",
+			"purl": "pkg:deb/libdeflate0@1.23-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Deflate Team \u003clibdeflate@packages.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libdeflate 1.23-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpsl5t64",
+			"version": "0.21.2-1.1+b1",
+			"purl": "pkg:deb/libpsl5t64@0.21.2-1.1+b1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Tim Rühsen \u003ctim.ruehsen@gmx.de\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libpsl 0.21.2-1.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "librav1e0.7",
+			"version": "0.7.1-9+b2",
+			"purl": "pkg:deb/librav1e0.7@0.7.1-9+b2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Rust Maintainers \u003cpkg-rust-maintainers@alioth-lists.debian.net\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "rust-rav1e 0.7.1-9"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "openssl-provider-legacy",
+			"version": "3.5.1-1+deb13u1",
+			"purl": "pkg:deb/openssl-provider-legacy@3.5.1-1+deb13u1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian OpenSSL Team \u003cpkg-openssl-devel@alioth-lists.debian.net\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "openssl 3.5.1-1+deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "init-system-helpers",
+			"version": "1.69~deb13u1",
+			"purl": "pkg:deb/init-system-helpers@1.69~deb13u1?arch=all",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian systemd Maintainers \u003cpkg-systemd-maintainers@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "init-system-helpers 1.69~deb13u1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "gzip",
+			"version": "1.13-1",
+			"purl": "pkg:deb/gzip@1.13-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Milan Kupcevic \u003cmilan@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "gzip 1.13-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libaudit1",
+			"version": "1:4.0.2-2+b2",
+			"purl": "pkg:deb/libaudit1@1:4.0.2-2+b2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Laurent Bigonville \u003cbigon@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "audit 1:4.0.2-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libdav1d7",
+			"version": "1.5.1-1",
+			"purl": "pkg:deb/libdav1d7@1.5.1-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Multimedia Maintainers \u003cdebian-multimedia@lists.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "dav1d 1.5.1-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libjbig0",
+			"version": "2.1-6.1+b2",
+			"purl": "pkg:deb/libjbig0@2.1-6.1+b2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Michael van der Kolff \u003cmvanderkolff@gmail.com\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "jbigkit 2.1-6.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libpam-modules-bin",
+			"version": "1.7.0-5",
+			"purl": "pkg:deb/libpam-modules-bin@1.7.0-5?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Sam Hartman \u003chartmans@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "pam 1.7.0-5"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "libxslt1.1",
+			"version": "1.1.35-1.2+deb13u2",
+			"purl": "pkg:deb/libxslt1.1@1.1.35-1.2+deb13u2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian XML/SGML Group \u003cdebian-xml-sgml-pkgs@lists.alioth.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "libxslt 1.1.35-1.2+deb13u2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "mawk",
+			"version": "1.3.4.20250131-1",
+			"purl": "pkg:deb/mawk@1.3.4.20250131-1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Boyuan Yang \u003cbyang@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "mawk 1.3.4.20250131-1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "curl",
+			"version": "8.14.1-2",
+			"purl": "pkg:deb/curl@8.14.1-2?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Debian Curl Maintainers \u003cteam+curl@tracker.debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "curl 8.14.1-2"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"type": "library",
+			"name": "tar",
+			"version": "1.35+dfsg-3.1",
+			"purl": "pkg:deb/tar@1.35+dfsg-3.1?arch=amd64",
+			"properties": [
+				{
+					"name": "package:vendor",
+					"value": "Janos Lenart \u003cocsi@debian.org\u003e"
+				},
+				{
+					"name": "package:provider",
+					"value": "DPKG"
+				},
+				{
+					"name": "package:source",
+					"value": "tar 1.35+dfsg-3.1"
+				},
+				{
+					"name": "package:status",
+					"value": "install ok installed"
+				},
+				{
+					"name": "package:layerHash",
+					"value": "0dcc3860f7b256faeebe02f46a0bdee0df75f98e548ba1b6cf2b28a56f86625a"
+				},
+				{
+					"name": "package:layerIndex",
+					"value": "1"
+				}
+			]
+		}
+	]
+}
