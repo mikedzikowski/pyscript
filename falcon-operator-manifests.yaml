@@ -1,0 +1,309 @@
+falcon-operator-manifests.yaml
+# =============================================================================
+# CrowdStrike Falcon Operator — Dual FalconNodeSensor Deployment
+# Targets: Worker Nodes      (falcon-system)
+#          Master/Control Plane Nodes (falcon-master-nodes)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. NAMESPACES
+# -----------------------------------------------------------------------------
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: falcon-operator
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/warn: privileged
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: falcon-system
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/warn: privileged
+    openshift.io/cluster-monitoring: "true"
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: falcon-master-nodes
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/warn: privileged
+    openshift.io/cluster-monitoring: "true"
+
+# -----------------------------------------------------------------------------
+# 2. FALCON API CREDENTIALS SECRETS
+# -----------------------------------------------------------------------------
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: falcon-api-secret
+  namespace: falcon-system
+type: Opaque
+stringData:
+  client_id: <YOUR_FALCON_CLIENT_ID>
+  client_secret: <YOUR_FALCON_CLIENT_SECRET>
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: falcon-api-secret
+  namespace: falcon-master-nodes
+type: Opaque
+stringData:
+  client_id: <YOUR_FALCON_CLIENT_ID>
+  client_secret: <YOUR_FALCON_CLIENT_SECRET>
+
+# -----------------------------------------------------------------------------
+# 3. SERVICE ACCOUNTS
+# -----------------------------------------------------------------------------
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: falcon-operator-node-sensor
+  namespace: falcon-system
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: falcon-operator-node-sensor
+  namespace: falcon-master-nodes
+
+# -----------------------------------------------------------------------------
+# 4. OPENSHIFT SCC
+# -----------------------------------------------------------------------------
+---
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  name: falcon-sensor-scc
+allowPrivilegedContainer: true
+allowHostDirVolumePlugin: true
+allowHostIPC: true
+allowHostNetwork: true
+allowHostPID: true
+allowHostPorts: true
+readOnlyRootFilesystem: false
+runAsUser:
+  type: RunAsAny
+seLinuxContext:
+  type: RunAsAny
+fsGroup:
+  type: RunAsAny
+supplementalGroups:
+  type: RunAsAny
+volumes:
+  - "*"
+users:
+  - system:serviceaccount:falcon-system:falcon-operator-node-sensor
+  - system:serviceaccount:falcon-master-nodes:falcon-operator-node-sensor
+groups: []
+
+# -----------------------------------------------------------------------------
+# 5. RBAC
+# -----------------------------------------------------------------------------
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: falcon-sensor-node-role
+rules:
+  - apiGroups: [""]
+    resources:
+      - nodes
+      - pods
+      - namespaces
+      - secrets
+      - serviceaccounts
+      - configmaps
+      - events
+    verbs: ["get", "list", "watch", "create", "update", "patch"]
+  - apiGroups: ["apps"]
+    resources: ["daemonsets"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  - apiGroups: ["falcon.crowdstrike.com"]
+    resources:
+      - falconnodesensors
+      - falconnodesensors/status
+      - falconnodesensors/finalizers
+    verbs: ["*"]
+  - apiGroups: ["security.openshift.io"]
+    resources: ["securitycontextconstraints"]
+    verbs: ["get", "list", "use"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: falcon-sensor-node-binding-infra
+subjects:
+  - kind: ServiceAccount
+    name: falcon-operator-node-sensor
+    namespace: falcon-system
+roleRef:
+  kind: ClusterRole
+  name: falcon-sensor-node-role
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: falcon-sensor-node-binding-master
+subjects:
+  - kind: ServiceAccount
+    name: falcon-operator-node-sensor
+    namespace: falcon-master-nodes
+roleRef:
+  kind: ClusterRole
+  name: falcon-sensor-node-role
+  apiGroup: rbac.authorization.k8s.io
+
+# -----------------------------------------------------------------------------
+# 6. FALCONNODESENSOR CR — Worker Nodes
+# -----------------------------------------------------------------------------
+---
+apiVersion: falcon.crowdstrike.com/v1alpha1
+kind: FalconNodeSensor
+metadata:
+  name: falcon-node-sensor-worker
+  namespace: falcon-system
+spec:
+  falcon_api:
+    client_id: <YOUR_FALCON_CLIENT_ID>
+    client_secret: <YOUR_FALCON_CLIENT_SECRET>
+    cloud_region: autodiscover
+  node:
+    nodeSelector:
+      node-role.kubernetes.io/worker: ""
+    tolerations:
+      - key: "node-role.kubernetes.io/worker"
+        operator: Exists
+        effect: NoSchedule
+      - key: "node.kubernetes.io/not-ready"
+        operator: Exists
+        effect: NoSchedule
+      - key: "node.kubernetes.io/unreachable"
+        operator: Exists
+        effect: NoExecute
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: node-role.kubernetes.io/worker
+                  operator: Exists
+                - key: node-role.kubernetes.io/infra
+                  operator: DoesNotExist
+                - key: node-role.kubernetes.io/master
+                  operator: DoesNotExist
+                - key: node-role.kubernetes.io/control-plane
+                  operator: DoesNotExist
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 1000m
+        memory: 1Gi
+  falcon:
+    tags:
+      - "openshift"
+      - "worker-nodes"
+      - "<YOUR_CLUSTER_NAME>"
+    trace: "none"
+
+# -----------------------------------------------------------------------------
+# 7. FALCONNODESENSOR CR — Master / Control Plane Nodes
+# -----------------------------------------------------------------------------
+---
+apiVersion: falcon.crowdstrike.com/v1alpha1
+kind: FalconNodeSensor
+metadata:
+  name: falcon-node-sensor-master
+  namespace: falcon-master-nodes
+spec:
+  falcon_api:
+    client_id: <YOUR_FALCON_CLIENT_ID>
+    client_secret: <YOUR_FALCON_CLIENT_SECRET>
+    cloud_region: autodiscover
+  node:
+    nodeSelector:
+      node-role.kubernetes.io/master: ""
+    tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: Exists
+        effect: NoSchedule
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: Exists
+        effect: NoSchedule
+      - key: "node.kubernetes.io/not-ready"
+        operator: Exists
+        effect: NoSchedule
+      - key: "node.kubernetes.io/unreachable"
+        operator: Exists
+        effect: NoExecute
+      - key: "node.kubernetes.io/disk-pressure"
+        operator: Exists
+        effect: NoSchedule
+      - key: "node.kubernetes.io/memory-pressure"
+        operator: Exists
+        effect: NoSchedule
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: node-role.kubernetes.io/master
+                  operator: Exists
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 250m
+        memory: 512Mi
+  falcon:
+    tags:
+      - "openshift"
+      - "master-nodes"
+      - "control-plane"
+      - "<YOUR_CLUSTER_NAME>"
+    trace: "none"
+
+# -----------------------------------------------------------------------------
+# 8. OLM OPERATOR SUBSCRIPTION
+# -----------------------------------------------------------------------------
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: falcon-operator-group
+  namespace: falcon-operator
+spec: {}
+
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: falcon-operator
+  namespace: falcon-operator
+spec:
+  channel: stable
+  name: falcon-operator
+  source: certified-operators
+  sourceNamespace: openshift-marketplace
+  installPlanApproval: Manual
