@@ -1,6 +1,6 @@
 # =============================================================================
 # CrowdStrike Falcon Node Sensor — CID + Proxy Configuration
-# Targets: Worker Nodes      (falcon-system)
+# Targets: Worker Nodes      (falcon-worker-nodes)
 #          Master/Control Plane Nodes (falcon-master-nodes)
 # No API credentials needed — image pulled from customer registry
 # =============================================================================
@@ -22,7 +22,7 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: falcon-system
+  name: falcon-worker-nodes
   labels:
     pod-security.kubernetes.io/enforce: privileged
     pod-security.kubernetes.io/audit: privileged
@@ -48,7 +48,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: falcon-operator-node-sensor
-  namespace: falcon-system
+  namespace: falcon-worker-nodes
 
 ---
 apiVersion: v1
@@ -83,7 +83,7 @@ supplementalGroups:
 volumes:
   - "*"
 users:
-  - system:serviceaccount:falcon-system:falcon-operator-node-sensor
+  - system:serviceaccount:falcon-worker-nodes:falcon-operator-node-sensor
   - system:serviceaccount:falcon-master-nodes:falcon-operator-node-sensor
 groups: []
 
@@ -127,7 +127,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: falcon-operator-node-sensor
-    namespace: falcon-system
+    namespace: falcon-worker-nodes
 roleRef:
   kind: ClusterRole
   name: falcon-sensor-node-role
@@ -149,7 +149,7 @@ roleRef:
 
 # -----------------------------------------------------------------------------
 # 5. FALCONNODESENSOR CR — Worker Nodes
-#    installNamespace: falcon-system
+#    installNamespace: falcon-worker-nodes
 # -----------------------------------------------------------------------------
 ---
 apiVersion: falcon.crowdstrike.com/v1alpha1
@@ -157,7 +157,7 @@ kind: FalconNodeSensor
 metadata:
   name: falcon-node-sensor-worker
 spec:
-  installNamespace: falcon-system
+  installNamespace: falcon-worker-nodes
   falcon:
     cid: <YOUR_FALCON_CID>
     apd: false
@@ -295,7 +295,7 @@ spec:
 #
 # 5. Apply SCC bindings:
 #    oc adm policy add-scc-to-user falcon-sensor-scc \
-#      system:serviceaccount:falcon-system:falcon-operator-node-sensor
+#      system:serviceaccount:falcon-worker-nodes:falcon-operator-node-sensor
 #    oc adm policy add-scc-to-user falcon-sensor-scc \
 #      system:serviceaccount:falcon-master-nodes:falcon-operator-node-sensor
 #
@@ -311,6 +311,6 @@ spec:
 #      {"kubernetes.io/os":"linux","node-role.kubernetes.io/master":""}}}}}'
 #
 # 9. Verify full coverage:
-#    oc get pods -n falcon-system -o wide && echo "---" && \
+#    oc get pods -n falcon-worker-nodes -o wide && echo "---" && \
 #    oc get pods -n falcon-master-nodes -o wide
 # =============================================================================
